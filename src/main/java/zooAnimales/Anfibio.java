@@ -13,9 +13,10 @@ public class Anfibio extends Animal {
 	private boolean venenoso;
 	
 	//Constructor
-	public Anfibio() {}
+	public Anfibio() {
+		this(null,0,null,null,null,false);
+	}
 	public Anfibio(String colorPiel, boolean venenoso) {
-		super();
 		this.colorPiel = colorPiel;
 		this.venenoso = venenoso;
 	}
@@ -23,6 +24,7 @@ public class Anfibio extends Animal {
 		super(nombre,edad,habitat,genero);
 		this.colorPiel = colorPiel;
 		this.venenoso = venenoso;
+		Anfibio.listado.add(this);
 	}
 	public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona, String colorPiel, boolean venenoso) {
 		super(nombre,edad,habitat,genero,zona);
@@ -74,26 +76,22 @@ public class Anfibio extends Animal {
 	public static Anfibio crearRana(String nombre, int edad, String genero, Zona zona) {
 		setRanas(ranas + 1);
 		Anfibio rana = new Anfibio(nombre, edad, "selva", genero, zona, "rojo", true);
-		getListado().add(rana);
 		return rana;
 	}
 	public static Anfibio crearRana(String nombre, int edad, String genero) {
 		setRanas(ranas + 1);
 		Anfibio rana = new Anfibio(nombre, edad, "selva", genero, "rojo", true);
-		getListado().add(rana);
 		return rana;
 	}
 	
 	public static Anfibio crearSalamandra(String nombre, int edad, String genero, Zona zona) {
 		setSalamandras(salamandras + 1);
 		Anfibio salamandra = new Anfibio(nombre, edad, "selva", genero, zona, "negro y amarillo", false);
-		getListado().add(salamandra);
 		return salamandra;
 	}
 	public static Anfibio crearSalamandra(String nombre, int edad, String genero) {
 		setSalamandras(salamandras + 1);
 		Anfibio salamandra = new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
-		getListado().add(salamandra);
 		return salamandra;
 	}
 	

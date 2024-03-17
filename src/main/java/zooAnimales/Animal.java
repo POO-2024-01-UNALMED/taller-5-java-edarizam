@@ -12,7 +12,9 @@ public class Animal {
 	private Zona zona;
 	
 	//Constructor
-	public Animal() {}
+	public Animal() {
+		this(null,0,null,null);
+	}
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		Animal.totalAnimales ++;
 		this.nombre = nombre;

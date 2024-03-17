@@ -13,11 +13,14 @@ public class Mamifero extends Animal {
 	private int patas;
 	
 	//Constructor
-	public Mamifero () {}
+	public Mamifero () {
+		this(null,0,null,null,null,false,0);
+	}
 	public Mamifero(String nombre, int edad, String habitat, String genero, Boolean pelaje, int patas) {
 		super(nombre,edad,habitat,genero);
 		this.pelaje = pelaje;
 		this.patas = patas;
+		Mamifero.listado.add(this);
 	}
 	public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona, Boolean pelaje, int patas) {
 		super(nombre,edad,habitat,genero,zona);
@@ -80,26 +83,22 @@ public class Mamifero extends Animal {
 	public static Mamifero crearCaballo(String nombre, int edad, String genero, Zona zona) {
 		Mamifero caballo = new Mamifero (nombre, edad, "Pradera", genero, zona, true, 4);
 		setCaballos(caballos + 1);
-		Mamifero.listado.add(caballo);
 		return caballo;
 	}
 	public static Mamifero crearCaballo(String nombre, int edad, String genero) {
 		Mamifero caballo = new Mamifero (nombre, edad, "Pradera", genero, true, 4);
 		setCaballos(caballos + 1);
-		Mamifero.listado.add(caballo);
 		return caballo;
 	}
 	
 	public static Mamifero crearLeon(String nombre, int edad, String genero, Zona zona) {
 		Mamifero leon = new Mamifero (nombre, edad, "Selva", genero, zona, true, 4);
 	    setLeones(leones + 1);
-		Mamifero.listado.add(leon);
 		return leon;
 	}
 	public static Mamifero crearLeon(String nombre, int edad, String genero) {
 		Mamifero leon = new Mamifero (nombre, edad, "Selva", genero, true, 4);
 	    setLeones(leones + 1);
-		Mamifero.listado.add(leon);
 		return leon;
 	}
 	

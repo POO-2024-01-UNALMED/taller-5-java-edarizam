@@ -9,7 +9,9 @@ public class Zoologico {
 	private ArrayList<Zona> zonas = new ArrayList<Zona>();
 	
 	//Constructores
-	public Zoologico() {}
+	public Zoologico() {
+		this(null,null);
+	}
 	public Zoologico(String nombre, String ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
