@@ -10,9 +10,11 @@ public class Zoologico {
 	
 	//Constructores
 	public Zoologico() {}
-	
+	public Zoologico(String nombre, String ubicacion) {
+		this.nombre = nombre;
+		this.ubicacion = ubicacion;
+	}
 	public Zoologico(String nombre, String ubicacion, ArrayList<Zona> zonas) {
-		super();
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 		this.zonas = zonas;

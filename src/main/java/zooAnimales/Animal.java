@@ -13,7 +13,13 @@ public class Animal {
 	
 	//Constructor
 	public Animal() {}
-
+	public Animal(String nombre, int edad, String habitat, String genero) {
+		Animal.totalAnimales ++;
+		this.nombre = nombre;
+		this.edad = edad;
+		this.habitat = habitat;
+		this.genero = genero;
+	}
 	public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
 		Animal.totalAnimales ++;
 		this.nombre = nombre;

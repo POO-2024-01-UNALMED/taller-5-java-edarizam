@@ -10,9 +10,11 @@ public class Zona {
 	
 	//Constructor
 	public Zona() {}
-	
+	public Zona(String nombre, Zoologico zoo) {
+		this.nombre = nombre;
+		this.zoo = zoo;
+	}
 	public Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales) {
-		super();
 		this.nombre = nombre;
 		this.zoo = zoo;
 		this.animales = animales;
