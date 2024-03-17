@@ -70,25 +70,29 @@ public class Pez extends Animal{
 		return "nadar";
 	}
 	
-	public static void crearSalmon(String nombre, int edad, String genero, Zona zona) {
+	public static Pez crearSalmon(String nombre, int edad, String genero, Zona zona) {
 		setSalmones(salmones + 1);
 		Pez salmon = new Pez(nombre, edad, "oceano", genero, zona, "rojo", 6);
 		getListado().add(salmon);
+		return salmon;
 	}
-	public static void crearSalmon(String nombre, int edad, String genero) {
+	public static Pez crearSalmon(String nombre, int edad, String genero) {
 		setSalmones(salmones + 1);
 		Pez salmon = new Pez(nombre, edad, "oceano", genero, "rojo", 6);
 		getListado().add(salmon);
+		return salmon;
 	}
 	
-	public static void crearBacalao(String nombre, int edad, String genero, Zona zona) {
+	public static Pez crearBacalao(String nombre, int edad, String genero, Zona zona) {
 		setBacalaos(bacalaos + 1);
 		Pez bacalao = new Pez(nombre, edad, "oceano", genero, zona, "gris", 6);
 		getListado().add(bacalao);
+		return bacalao;
 	}
-	public static void crearBacalao(String nombre, int edad, String genero) {
+	public static Pez crearBacalao(String nombre, int edad, String genero) {
 		setBacalaos(bacalaos + 1);
 		Pez bacalao = new Pez(nombre, edad, "oceano", genero, "gris", 6);
 		getListado().add(bacalao);
+		return bacalao;
 	}
 }

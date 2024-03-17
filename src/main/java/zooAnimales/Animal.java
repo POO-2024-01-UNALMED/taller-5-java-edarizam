@@ -73,7 +73,7 @@ public class Animal {
 		return "desplazarse";
 	}
 	
-	public String totalPorTipo() {
+	public static String totalPorTipo() {
 		return "Mamiferos: " + Mamifero.cantidadMamiferos() +
 				"\nAves: " + Ave.cantidadAves() +
 				"\nReptiles: " + Reptil.cantidadReptiles() +
@@ -86,12 +86,12 @@ public class Animal {
 			return "Mi nombre es " + this.nombre + 
 				", tengo una edad de " + this.edad + 
 				", habito en " + this.habitat + 
-				" y mi género es " + this.genero;
+				" y mi genero es " + this.genero;
 			}else {
 				return "Mi nombre es " + this.nombre + 
 						", tengo una edad de " + this.edad + 
 						", habito en " + this.habitat + 
-						" y mi género es " + this.genero + 
+						" y mi genero es " + this.genero + 
 						", la zona en la que me ubico " + this.zona +
 						" en el " + this.zona.getZoo();
 			}
